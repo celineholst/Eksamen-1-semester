@@ -1,0 +1,26 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 110vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rosario&display=swap');
+
+/* CSS variabler */
+:root {
+    --headline: 'Poppins', sans-serif;
+    --main-text: 'Rosario', sans-serif;
+    --header-footer: #333333;
+    --white: #fff;
+    --brown: #a39571;
+    --beige: #e3e1da;
+}

@@ -1,0 +1,177 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 110vh;
+}
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rosario&display=swap');
+
+/* CSS variabler */
+:root {
+    --headline: 'Poppins', sans-serif;
+    --main-text: 'Rosario', sans-serif;
+    --header-footer: #333333;
+    --white: #fff;
+    --brown: #a39571;
+    --beige: #e3e1da;
+}
+
+/* Produktbilleder */
+.product-img {
+    width: 125px;
+    height: auto;
+}
+
+/* Text styles */
+h2 {
+    font-family: var(--headline);
+    font-size: 28px;
+    color: var(--brown);
+    letter-spacing: 0.5px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.indledning {
+    font-family: var(--main-text);
+    font-size: 14px;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.card_name {
+    left: 15%;
+    height: 150px;
+    color: #000;
+    letter-spacing: 0.5px;
+}
+
+.card_name p {
+    font-size: 16px;
+    font-family: var(--headline);
+    font-weight: 600;
+}
+
+.card_price {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info {
+    font-family: var(--main-text);
+    font-size: 14px;
+    line-height: 1.5;
+    display: block;
+    text-align: center;
+}
+
+/* Layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    max-width: 1200px;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    align-items: center;
+}
+
+/* Ikoner */
+.icon {
+    width: 25px;
+}
+
+/* Produktkort */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    margin-top: 20px;
+    overflow: hidden;
+    height: 350px;
+}
+
+.card-small {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    padding-top: 140px;
+    border-radius: 1rem;
+    margin-top: 20px;
+    overflow: hidden;
+    height: 350px;
+}
+
+article:nth-child(1) {
+    background-color: var(--beige)
+}
+
+article:nth-child(2) {
+    background-color: var(--beige)
+}
+
+article:nth-child(3) {
+    background-color: var(--beige)
+}
+
+article:nth-child(4) {
+    background-color: var(--beige)
+}
+
+/* Hover */
+.card:hover {
+    box-shadow: 0 .5rem 1rem #f7f7f7;
+}
+
+.card:hover .card_img {
+    transform: rotate(30deg);
+}
+
+/* @media-rules tablet */
+@media only screen and (min-width:768px) {
+    /* Indledning */
+    h2 {
+        font-size: 40px;
+    }
+    
+    .indledning {
+        font-size: 20px;
+        padding: 0 55px;
+    }
+    
+    /* Produktkort */
+    .grid {
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+    
+    .card, .card-small {
+        margin: 20px;
+    }
+
+}
+
+/* @media-rules laptop */
+@media only screen and (min-width:950px) {
+    .card {
+        width: 220px;
+        height: 380px;
+    }
+    
+    .card-small {
+        width: 220px;
+        height: 380px;
+    }
+
+}

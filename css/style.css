@@ -7,6 +7,8 @@
 body {
     width: 100%;
     height: 110vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Fonts */
@@ -19,6 +21,8 @@ body {
     --main-text: 'Rosario', sans-serif;
     --header-footer: #333333;
     --white: #fff;
+    --brown: #a39571;
+    --beige: #e3e1da;
 }
 
 /* Styling af header start */
@@ -38,6 +42,7 @@ nav {
     margin-top: 4px;
 }
 
+/* Basic nav syles */
 .nav-wrapper {
     position: fixed;
     top: 0;
@@ -63,27 +68,6 @@ nav {
     width: 100%;
     text-align: right;
     margin-bottom: 10px;
-}
-
-/* Animation på menulinks */
-.nav-wrapper ul li:nth-child(1) a {
-    transition-delay: 0.2s;
-}
-
-.nav-wrapper ul li:nth-child(2) a {
-    transition-delay: 0.3s;
-}
-
-.nav-wrapper ul li:nth-child(3) a {
-    transition-delay: 0.4s;
-}
-
-.nav-wrapper ul li:nth-child(4) a {
-    transition-delay: 0.5s;
-}
-
-.nav-wrapper ul li:not(:first-child) {
-    margin-left: 0;
 }
 
 /* Styling af menutext */
@@ -200,21 +184,228 @@ nav {
 
 /* @media-rules laptop */
 @media only screen and (min-width:950px) {
+    .nav-wrapper ul li {
+      display: inline;
+    }
+    
     .nav-wrapper {
+        clear: none;
+        float: right;
+        max-height: none;
         background: none;
     }
     
-    .nav-wrapper ul {
-    position: relative;
-    top: 40px;
+    .hidden, .nav-btn {
+        display:
     }
-    
-    .nav-wrapper ul li {
-        display: inline;
-        margin-left: 650px;
-    }
-    
 }
 
 /* Styling af header slut */
 
+main {
+    flex: 1 0 auto;
+}
+
+/* Styling af footer start */
+footer {
+    background: var(--header-footer);
+    color: var(--white);
+    width: 100%;
+    flex-shrink: 0;
+}
+
+/* Styling af footer text */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--white);
+    font-family: var(--main-text);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+   font-family: var(--main-text);
+    font-size: 16px;
+    line-height: 1.5; 
+}
+
+.title {
+    font-family: var(--headline);
+    font-family: 16px;
+    padding-bottom: 4px;
+    padding-top: 8px;
+}
+
+.main-item {
+    padding: 0 1.5rem 0.5rem;
+}
+
+/* SoMe ikoner */
+.social {
+    padding: 0 1.8rem 1.25rem;
+}
+
+.social-list {
+    display: flex;
+    justify-content: center;
+    padding-top: 1.25rem;
+}
+
+.social-list img {
+    width: 45px;
+}
+
+.social-list li {
+    margin: 0.5rem;
+}
+
+/* Nyhedsbrev */
+form {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+input[type="email"] {
+    font-family: var(--main-text);
+    font-size: 14px;
+    border: 0;
+    padding: 0.6rem;
+    margin-top: 0.3rem;
+}
+
+input[type="submit"] {
+    background-color: var(--brown);
+    color: var(--white);
+    font-family: var(--headline);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 0;
+    padding: 0.6rem 0.9rem;
+    margin-top: 0.3rem;
+}
+
+/* Terms, Copyright */
+.terms {
+    font-family: var(--main-text);
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.terms-list {
+    width: 100%;
+}
+
+/* @media-rules tablet */
+@media only screen and (min-width:768px) {
+    /* Opdele footer i kolonner */
+    .main {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-flow: wrap;
+    }
+    
+    .main-item {
+        width: 50%;
+    }
+    
+    /* Styling af footer text */ 
+    .title {
+        font-size: 24px;
+    }
+    
+    footer a {
+        font-size: 18px;
+    }
+    
+    p {
+        font-size: 18px;
+    }
+    
+    .main-item {
+    padding: 0 2.2rem;
+    margin-top: 20px;
+    }
+    
+    /* Nyhedsbrev */
+    input[type="email"] {
+       padding: 1rem;
+        font-size: 16px;
+    }
+    
+    input[type="submit"] {
+        font-size: 18px;
+    }
+    
+    /* SoMe ikoner */
+    .social-list img {
+    width: 55px;
+    }
+    
+    .social-list li {
+    margin: 0.9rem;
+    }
+    
+    /* Terms, Copyright */
+    .terms {
+        font-size: 18px;
+    }
+}
+
+/* @media-rules laptop */
+@media only screen and (min-width:950px) {
+    .main {
+        padding: 0 1.5rem;
+    }
+    
+    /* Styling af text */
+    .title {
+        font-size: 28px;
+    }
+    
+    footer a {
+        font-size: 24px;
+    }
+    
+    p {
+        font-size: 22px;
+    }
+    
+    /* Nyhedsbrev */
+    input[type="email"] {
+       padding: 1.3rem;
+        font-size: 20px;
+    }
+    
+    input[type="submit"] {
+        font-size: 24px;
+    }
+    
+    /* SoMe ikoner */
+    .social-list img {
+    width: 70px;
+    }
+    
+    .social-list li {
+    margin: 1.5rem;
+    }
+    
+    /* Terms, Copyright */
+    .terms {
+        font-size: 24px;
+    }
+}
+/* Styling af footer slut */

@@ -1,0 +1,288 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 110vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rosario&display=swap');
+
+/* CSS variabler */
+:root {
+    --headline: 'Poppins', sans-serif;
+    --main-text: 'Rosario', sans-serif;
+    --header-footer: #333333;
+    --white: #fff;
+    --brown: #a39571;
+    --beige: #e3e1da;
+}
+
+/* Hero Image styling */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* Billede */
+    background-image: url(../images/baggrund.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 375px;
+    height: 200px;
+}
+
+/* Hero Image text */
+.hero h2 {
+    font-family: var(--headline);
+    font-size: 22px;
+    color: var(--beige);
+    text-shadow: 1px 1px 3px #000;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+/* Button */
+.hero .btn {
+    display: block;
+    width: 120px;
+    padding: 0.4em;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--brown);
+    font-family: var(--headline);
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+}
+
+/* Beskrivelse af kampagnen */
+.about {
+    text-align: center;
+    line-height: 1.5;
+    padding: 0 15px;
+}
+
+.about h3 {
+    font-family: var(--headline);
+    font-size: 24px;
+    color: var(--brown);
+    letter-spacing: 0.5px;
+    margin-top: 15px;
+}
+
+.about p {
+    font-family: var(--main-text);
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.slut {
+    font-style: italic;
+}
+
+.signature {
+    width: 150px;
+    float: right;
+}
+
+/* Blogopslag */
+h3 {
+    font-family: var(--headline);
+    font-size: 24px;
+    color: var(--brown);
+    letter-spacing: 0.5px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+h4 {
+    font-family: var(--headline);
+    font-size: 16px;
+    color: var(--brown);
+    letter-spacing: 0.5px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Image slider */
+.auto-slider {
+    overflow-x: hidden;
+    margin-bottom: 20px;
+}
+
+.auto-slider li img {
+    width: 375px;
+    display: block;
+}
+
+.auto-slider_content {
+    list-style: none;
+    display: flex;
+    animation-name: slide;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+/* Animationer */
+@keyframes slide {
+    25% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-188px);
+    }
+    75% {
+        transform: translateX(-378px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* @media-rules tablet */
+@media only screen and (min-width:768px) {
+    /* Hero Image */
+    .hero {
+        width: 768px;
+        height: 350px;
+    }
+    
+    /* Hero text */
+    .hero h2 {
+        font-size: 36px;
+    }
+    
+    /* Button */
+    .hero .btn {
+        width: 150px;
+        padding: 0.5em;
+        font-size: 24px;
+    }
+    
+    /* Beskrivelse af kampagnen */
+    .about {
+        padding: 0 55px;
+    }
+    
+    .about h3 {
+        font-size: 32px;
+    }
+    
+    .about p {
+        font-size: 18px;
+    }
+    
+    .signature {
+        width: 185px;
+        margin-top: -30px;
+    }
+    
+    
+    /* Blogopslag */
+    h3 {
+        font-size: 32px;
+    }
+    
+    h4 {
+        font-size: 26px;
+    }
+    
+    
+    /* Image slider */
+    .auto-slider li img {
+        width: 768px; 
+    }
+    
+    /* Animationer */
+    @keyframes slide {
+    25% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-382px);
+    }
+    75% {
+        transform: translateX(-770px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* @media-rules laptop */
+@media only screen and (min-width:950px) {
+    /* Hero Image */
+    .hero {
+        width: 1280px;
+        height: 500px;
+    }
+    
+    /* Hero text */
+    .hero h2 {
+        font-size: 55px;
+    }
+    
+    /* Button */
+    .hero .btn {
+        width: 250px;
+        font-size: 34px;
+    }
+    
+    /* Beskrivelse af kampagnen */
+    .about {
+        padding: 0 100px;
+    }
+    
+    .about h3 {
+        font-size: 42px;
+    }
+    
+    .about p {
+        font-size: 24px;
+    }
+    
+    .signature {
+        width: 280px;
+        margin-top: -60px;
+    }
+    
+    /* Blogopslag */
+    h3 {
+        font-size: 42px;
+    }
+    
+    h4 {
+        font-size: 36px;
+    }
+    
+    /* Image slider */
+    .auto-slider li img {
+        width: 1280px; 
+    }
+    
+    /* Animationer */
+    @keyframes slide {
+    25% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-640px);
+    }
+    75% {
+        transform: translateX(-1290px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
