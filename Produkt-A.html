@@ -14,7 +14,7 @@
 
 <!-- Stylesheets -->
 	<link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/produkt-a.css">
+    <link rel="stylesheet" href="css/produkt-small.css">
     
 </head>
 
@@ -22,8 +22,8 @@
     
 <!-- Header -->
 <header>
-    <div class="container">
-        <nav>
+    <!-- Navbar til mobil og tablet -->
+        <nav class="mobile">
         <!-- Hamburger menu -->
             <input type="checkbox" id="nav" class="hidden">
             <label for="nav" class="nav-btn">
@@ -45,11 +45,89 @@
                 </ul>
             </div>
         </nav>
-    </div>
+    
+    <!-- Navbar til screen -->
+    <nav class="screen">
+        <!-- Logo -->
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="logo" height="35"></a>
+            </div>
+        <!-- Navigation links -->
+            <div class="nav-wrapper-1">
+                <ul>
+                    <li class="menu-link"><a href="index.html">Hjem</a></li>
+                    <li class="menu-link"><a href="Shop.html">Shop</a></li>
+                    <li class="menu-link"><a href="Kampagne.html">Kampagne</a></li>
+                    <li class="menu-link"><a href="Indsamling.html">Indsamling</a></li>
+                </ul>
+            </div>
+        </nav>
 </header>
 
+<!-- Kategoribar -->
+    <div class="kat-bar">
+    <ul class="kat">
+        <li><a href="#råvarer">Råvarer</a></li>
+        <li><a href="#bæredygtig">Bæredygtighed</a></li>
+        <li><a href="#ingrediens">Ingredienser</a></li>
+    </ul>
+    </div>
+    
 <!-- Indhold -->
-<main>
+<main class="container-1">
+    
+    <!-- Produktbillede -->
+    <div class="imgBox">
+        <img src="images/A-small.png" alt="liquorice" class="img">
+    </div>
+    
+    <!-- Produktbeskrivelse -->
+    <div class="details">
+    <div class="content">
+        <h2>A – THE ORIGINAL</h2>
+        <span>CHOCOLATE COATED LIQUORICE</span><br>
+        <p>Lakrids A var det aller første produkt Johan Bülow skabte, da han fik idéen om at overtrække lakrids med chokolade. Trods skepsis til idéen, så det populære produkt Lakrids A snart dagens lys. Kombinationen af sød lakrids, nøje udvalgt premium mælkechokolade og fint lakridspulver er efter manges udsagn yderst vanedannende.<br><br>
+        Nettovægt 125 gram</p><br>
+        <h3>65,00 kr.</h3>
+        <button>LÆG I KURV</button>
+    </div>
+    </div>
+    <br><br>
+    
+    <!-- Råvarebeskrivelse -->
+    <h4 id="råvarer">KUN DE BEDSTE RÅVARER</h4>
+    <p class="commodities">Hos lakrids by Bülow anvender vi særligt udvalgte råvarer leveret af leverandører fra hele verden.</p>
+    
+    <!-- Ingrediens slider -->
+    <div class="auto-slider">
+        <ul class="auto-slider_content">
+            <li><img src="images/lakrids.png" alt="slide-1"><h5>Et center af sød lakrids</h5><p class="slider-des">Sød, men i balance med sin egen styrke - tilsat en ekstra finesse i form af naturlig anis.</p></li>
+            <li><img src="images/chokolade.png" alt="slide-2"><h5>Mælkechokolade</h5><p class="slider-des">Mælkechokoladen har en cremet tesktur og en fyldig, sød smag, som er elsket af chokoladeconnaisseurs over hele verden.</p></li>
+            <li><img src="images/lakridsrod.png" alt="slide-3"><h5>Lakridsrødder</h5><p class="slider-des">Vi finder vores søde lakridsrødder i Italien, Afghanistan og i Mellemøsten.</p></li>
+        </ul>
+    </div>
+    
+    <!-- Bæredygtighed / infographic -->
+    <div class="infographic">
+    <h4 id="bæredygtig">BÆREDYGTIGHED</h4>
+        <img src="images/Infographic-A.png" alt="img" class="info-img">
+    </div>
+    
+    <!-- Ingrediensliste -->
+    <div>
+    <h4 id="ingrediens">INGREDIENSER</h4>
+    <p class="ing-des">63 % mælke/mjölkchokolade (sukker, kakaosmør, sødmælks-/helmjölkpulver, kakaomasse, emulgator: sojalecitin, naturlig vaniljearoma), rismel/rismjöl, invertsukkersirup, sukker, melasse, glukosesirup, 3.6 % rålakrids, rapsolie, salt, anisolie, overfladebehandlingsmidler/ytbehandlingsmedel (kokosolie, kokosfedt). Mindst 35 % kakaotørstof. Glutenfri. Beskyttes/skyddas mod varme og fugt.</p>
+    <h6>Næringsindhold pr. 100g</h6>
+    <ul class="næring">
+        <li>Energi 1990 kJ / 475 kcal</li>
+        <li>Fedt 22 g</li>
+        <li>heraf mettede fedtsyrer 13 g</li>
+        <li>Kulhydrater 64 g</li>
+        <li>heraf sukkerarter 45 g</li>
+        <li>Protein 5,5 g</li>
+        <li>Salt 0,2 g</li>
+    </ul>
+    </div>
 </main>
 
 <!-- Footer -->

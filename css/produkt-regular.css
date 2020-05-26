@@ -1,0 +1,462 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 110vh;
+}
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rosario&display=swap');
+
+/* CSS variabler */
+:root {
+    --headline: 'Poppins', sans-serif;
+    --main-text: 'Rosario', sans-serif;
+    --header-footer: #333333;
+    --white: #fff;
+    --brown: #a39571;
+    --beige: #e3e1da;
+}
+
+/* Kategoribar */
+.kat-bar {
+    margin-top: 80px;
+}
+
+.kat-bar ul li {
+    display: inline-block;
+}
+
+.kat-bar ul li a {
+    font-family: var(--headline);
+    font-size: 14px;
+    text-decoration: none;
+    color: var(--brown);
+    font-weight: 600;
+    margin-left: 18px;
+    }
+
+.kat-bar ul li:not(:first-child) {
+        margin-left: 15px;
+}
+
+/* Standard styles */
+.container-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 10px;
+}
+
+/* Produktbillede */
+.imgBox {
+    background-color: var(--beige);
+    height: 280px;
+}
+
+.img {
+    width: 120px;
+    filter: drop-shadow(0 0 15px #c1bfb5);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+/* Produktbeskrivelse */
+.details {
+    padding: 20px;
+}
+
+h2 {
+    font-family: var(--headline);
+    font-size: 26px;
+}
+
+span {
+    display: block;
+    text-transform: uppercase;
+    font-family: var(--main-text);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.content p {
+    font-family: var(--main-text);
+    font-size: 13px;
+}
+
+h3 {
+    font-family: var(--headline);
+    font-size: 24px;
+    float: left;
+}
+
+/* Læg i kurv-knap */
+button {
+    background: var(--brown);
+    color: var(--white);
+    font-family: var(--headline);
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    padding: 5px 15px;
+    margin-top: -5px;
+    text-transform: uppercase;
+    float: right;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+/* Råvarebeskrivelse */
+h4 {
+    font-family: var(--headline);
+    color: var(--brown);
+    font-size: 23px;
+    text-align: center;
+}
+
+.commodities {
+    font-family: var(--main-text);
+    font-size: 13px;
+    text-align: center;
+    padding: 0 2px;
+}
+
+/* Indgrediens slider */
+.auto-slider {
+    overflow-x: hidden;
+    margin-bottom: 20px;
+    margin-left: 40px;
+}
+
+.auto-slider li img {
+    width: 290px;
+    display: block;
+}
+
+.auto-slider_content {
+    list-style: none;
+    display: flex;
+    animation-name: slide;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+/* Animationer */
+@keyframes slide {
+    25% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-270px);
+    }
+    75% {
+        transform: translateX(-550px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Indgrediens text */
+h5 {
+    font-family: var(--headline);
+    font-size: 16px;
+    text-align: center;
+}
+
+.slider-des {
+    font-family: var(--main-text);
+    font-size: 12px;
+    text-align: center;
+    padding: 0 30px;
+}
+
+/* Bæredygtighed / infographic */
+.infographic {
+    background-color: var(--beige);
+    width: 100%;
+}
+
+#bæredygtig {
+    color: black;
+    margin-top: 20px;
+}
+
+.info-img {
+    width: 100%;
+    padding: 20px 0;
+}
+
+/* Ingrediensliste og næringsindhold*/
+#ingrediens {
+    margin-top: 10px;
+}
+
+.ing-des {
+    font-family: var(--main-text);
+    font-size: 14px;
+    text-align: center;
+    padding: 0 10px;
+}
+
+h6 {
+    font-family: var(--headline);
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.næring {
+    font-family: var(--main-text);
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* @media-rules tablet */
+@media only screen and (min-width:768px) {
+    /* Kategoribar */
+    .kat-bar ul li a {
+        font-size: 20px;
+        margin-left: 70px;
+    }
+
+    .kat-bar ul li:not(:first-child) {
+        margin-left: 50px;
+    }
+    
+    /* Produktbillede */
+    .imgBox {
+        height: 360px;
+    }
+    
+    .img {
+        width: 150px;
+        margin-top: 30px;
+    }
+    
+    /* Produktbeskrivelse */
+    .details {
+    padding: 20px 50px;
+    }
+    
+    h2 {
+        font-size: 32px;
+    }
+    
+    span {
+        font-size: 18px;
+    }
+    
+    .content p {
+        font-size: 17px;
+    }
+    
+    h3 {
+        font-size: 30px;
+    }
+    
+    /* Læg i kurv-knap */
+    button {
+        font-size: 28px;
+        padding: 8px 20px;
+    }
+    
+    /* Indgrediens slider */
+    .auto-slider li img {
+        width: 400px;
+    }
+    
+    /* Råvarebeskrivelse */ 
+    h4 {
+        font-size: 32px;
+    }
+    
+    .commodities {
+        font-size: 18px;
+        padding: 0 50px;
+    }
+    
+    /* Animationer */
+    @keyframes slide {
+    25% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-50px);
+    }
+    75% {
+        transform: translateX(-460px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+    }
+    
+    /* Indgrediens text */
+    h5 {
+        font-size: 20px;
+    }
+
+    .slider-des {
+        font-size: 16px;
+        padding: 0 55px;
+    }
+    
+    /* Bæredygtighed / infographic */
+    .infographic {
+        margin-top: 20px;
+    }
+    
+    /* Ingrediensliste og næringsindhold*/
+    #ingrediens {
+        margin-top: 20px;
+    }
+    
+    .ing-des {
+        font-size: 18px;
+        padding: 0 50px;
+    }
+    
+    h6 {
+        font-size: 18px;
+        margin-top: 15px;
+    }
+    
+    .næring {
+        font-size: 18px;
+    }
+}
+
+/* @media-rules laptop */
+@media only screen and (min-width:950px) {
+    /* Kategoribar */
+    .kat-bar {
+        margin-top: 90px;
+    }
+    
+    .kat-bar ul li a {
+        font-size: 30px;
+        margin-left: 155px;
+    }
+    
+    /* Grid */
+    .container-1 {
+        margin-top: 10px;
+        grid-template-columns: repeat(2, 50%);
+    }
+    
+    /* Produktbillede */
+    .imgBox {
+        height: 530px;
+    }
+    
+    .img {
+        width: 220px;
+        margin-top: 50px;
+    }
+    
+    /* Produktbeskrivelse */
+    h2 {
+        font-size: 44px;
+    }
+    
+    span {
+        font-size: 24px;
+    }
+    
+    .content p {
+        font-size: 22px;
+    }
+    
+    h3 {
+        font-size: 42px;
+    }
+    
+    /* Læg i kurv-knap */
+    button {
+        font-size: 34px;
+        padding: 8px 24px;
+    }
+    
+    /* Råvarebeskrivelse */ 
+    h4 {
+        margin-top: 40px;
+        font-size: 44px;
+        position: relative;
+        left: -300px;
+    }
+    
+    .commodities {
+        font-size: 24px;
+        position: relative;
+        left: 340px;
+    }
+    
+     /* Autoslider stop */
+    @keyframes slide {
+    25% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    75% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(0);
+    }
+    }
+    
+    /* Styling af ingredienser */
+    .auto-slider {
+        position: relative;
+        overflow-x: visible;
+        left: -620px;
+        margin-top: 70px;
+    }
+    
+    /* Indgrediens text */
+    h5 {
+        font-size: 26px;
+    }
+
+    .slider-des {
+        font-size: 20px;
+        padding: 0 40px;
+    }
+    
+    /* Bæredygtighed / infographic */
+    #bæredygtig {
+        margin-left: 440px;
+    }
+    
+    .info-img {
+        margin-top: 10px;
+    }
+    
+    /* Ingrediensliste og næringsindhold*/
+    #ingrediens {
+        margin-left: 460px;
+    }
+    
+    .ing-des {
+        font-size: 24px;
+    }
+    
+    h6 {
+        font-size: 24px;
+    }
+    
+    .næring {
+        font-size: 24px;
+    }
+    
+}

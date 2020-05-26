@@ -138,6 +138,14 @@ article:nth-child(4) {
     transform: rotate(30deg);
 }
 
+.card-small:hover {
+    box-shadow: 0 .5rem 1rem #f7f7f7;
+}
+
+.card-small:hover .card_img {
+    transform: rotate(30deg);
+}
+
 /* @media-rules tablet */
 @media only screen and (min-width:768px) {
     /* Indledning */
@@ -164,14 +172,31 @@ article:nth-child(4) {
 
 /* @media-rules laptop */
 @media only screen and (min-width:950px) {
+    /* Indledning */
+    h2 {
+        font-size: 60px;
+    }
+    
+    .indledning {
+        font-size: 26px;
+        padding: 0 100px;
+    }
+    
+    /* Produktkort */
     .card {
         width: 220px;
         height: 380px;
+        margin-left: 100px;
+        margin-top: 40px;
+        margin-bottom: 40px;
     }
     
     .card-small {
         width: 220px;
         height: 380px;
+        margin-left: 100px;
+        margin-top: 40px;
+         margin-bottom: 40px;
     }
 
 }

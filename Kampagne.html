@@ -22,8 +22,8 @@
     
 <!-- Header -->
 <header>
-    <div class="container">
-        <nav>
+    <!-- Navbar til mobil og tablet -->
+        <nav class="mobile">
         <!-- Hamburger menu -->
             <input type="checkbox" id="nav" class="hidden">
             <label for="nav" class="nav-btn">
@@ -45,11 +45,69 @@
                 </ul>
             </div>
         </nav>
-    </div>
+    
+    <!-- Navbar til screen -->
+    <nav class="screen">
+        <!-- Logo -->
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="logo" height="35"></a>
+            </div>
+        <!-- Navigation links -->
+            <div class="nav-wrapper-1">
+                <ul>
+                    <li class="menu-link"><a href="index.html">Hjem</a></li>
+                    <li class="menu-link"><a href="Shop.html">Shop</a></li>
+                    <li class="menu-link"><a href="Kampagne.html">Kampagne</a></li>
+                    <li class="menu-link"><a href="Indsamling.html">Indsamling</a></li>
+                </ul>
+            </div>
+        </nav>
 </header>
 
 <!-- Indhold -->
 <main>
+    <!-- Banner -->
+    <section class="banner"></section>
+    
+    <!-- Kontaktform -->
+    <div class="wrapper">
+        <div class="kam-info">
+        <h2>KAMPAGNE</h2>
+            <p class="wrap-info">Skriv din helt egen personlig hilsen til en du holder af. Vælg imellem danskerne favoritter: A - the original og C - coffee kieni, og sæt dit personlige præg på produktet. </p>
+            <span>10% af fortjenesten går til indsamlingen til Bornholms hospital.</span>
+        </div>
+        
+    <!-- Form -->
+        <div class="form">
+        <h3>OPLYSNINGER</h3>
+            <form>
+            <p>
+                <label>Produkt</label>
+                <input type="text" name="name">
+            </p>
+            <p>
+                <label>Størrelse</label>
+                <input type="text" name="name">
+            </p>
+            <p>
+                <label>Modtager</label>
+                <input type="text" name="name">
+            </p>
+            <p>
+                <label>Afsender</label>
+                <input type="text" name="name">
+            </p>
+            <p>
+                <label>Skriv din hilsen her</label>
+                <textarea name="message" rows="5"></textarea>
+            </p>
+            <p>
+                <button>LÆG I KURV</button>
+            </p>
+            </form>
+        </div>
+    </div>
+    
 </main>
 
 <!-- Footer -->

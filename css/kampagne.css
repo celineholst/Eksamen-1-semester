@@ -24,3 +24,19 @@ body {
     --brown: #a39571;
     --beige: #e3e1da;
 }
+
+/* Banner */
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* Billede */
+    background-image: url(../images/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 375px;
+    height: 200px;
+    margin-top: 30px;
+}
