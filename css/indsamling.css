@@ -7,8 +7,6 @@
 body {
     width: 100%;
     height: 110vh;
-    display: flex;
-    flex-direction: column;
 }
 
 /* Fonts */
@@ -23,4 +21,254 @@ body {
     --white: #fff;
     --brown: #a39571;
     --beige: #e3e1da;
+}
+
+/* Indledning til indsamling */
+.indledning {
+    margin-top: 75px;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-family: var(--headline);
+    color: var(--brown);
+    font-size: 28px;
+}
+
+h3 {
+    font-family: var(--headline);
+    color: var(--brown);
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.indledning-text {
+    font-family: var(--main-text);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Bornholms hospital billede */
+.map {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+/* Animeret linje-graf */
+.wrapper {
+    text-align: center;
+}
+
+h4 {
+    font-family: var(--headline);
+    color: var(--brown);
+    font-size: 20px;
+}
+
+.goal {
+    font-family: var(--main-text);
+    font-size: 14px;
+}
+
+.goal-2 {
+    font-family: var(--main-text);
+    font-size: 12px;
+    font-style: italic;
+    padding: 0 15px;
+}
+
+/* Styling af linje */
+.line-wrap {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.line {
+    position: relative;
+    margin: 0 15px;
+}
+
+.line:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    background-color: var(--beige);
+}
+
+.line:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 25px;
+    background-color: var(--brown);
+    animation-duration: .7s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-name: goal;
+}
+
+/* Animation af linje */
+@keyframes goal {
+    to {
+        width: 25%;
+    }
+}
+
+/* Bidragsektion */
+.bidrag {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.bidrag-text {
+    font-family: var(--main-text);
+    font-size: 14px;
+    padding: 0 20px;
+}
+
+/* Donation-knap */
+.btn {
+    background: var(--brown);
+    text-decoration: none;
+    font-family: var(--headline);
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--white);
+    padding: 10px 15px;
+}
+
+.btn:hover {
+    background: var(--beige);
+    color: #000;
+    outline: 0;
+}
+
+/* @media-rules tablet */
+@media only screen and (min-width:768px) {
+    /* Indledning til indsamling */ 
+    .indledning {
+        padding: 15px 50px;
+    }
+    
+    h2 {
+        font-size: 40px;
+    }
+    
+    h3 {
+        font-size: 30px;
+    }
+    
+    .indledning-text {
+        font-size: 18px;
+    }
+    
+    /* Animeret linje-graf */ 
+    h4 {
+        font-size: 30px;
+    }
+    
+    .goal {
+        font-size: 18px;
+    }
+    
+    .goal-2 {
+        font-size: 16px;
+        margin-top: 35px;
+    }
+    
+    /* Styling af linje */
+    .line {
+        margin: 0 50px;
+    }
+    
+    .line:before {
+        height: 40px;
+    }
+    
+    .line:after {
+        height: 40px;
+    }
+    
+    /* Bidragsektion */
+    .bidrag-text {
+        font-size: 18px;
+        padding: 0 60px;
+    }
+    
+    /* Donation-knap */
+    .btn {
+        font-size: 24px;
+    }
+}
+
+/* @media-rules laptop */
+@media only screen and (min-width:950px) {
+    /* Indledning til indsamling */ 
+    .indledning {
+        padding: 15px 90px;
+    }
+    
+    h2 {
+        font-size: 50px;
+    }
+    
+    h3 {
+        font-size: 40px;
+    }
+    
+    .indledning-text {
+        font-size: 24px;
+    }
+    
+    /* Animeret linje-graf */ 
+    h4 {
+        font-size: 40px;
+    }
+    
+    .goal {
+        font-size: 24px;
+    }
+    
+    .goal-2 {
+        font-size: 22px;
+        margin-top: 60px;
+    }
+    
+    /* Styling af linje */
+    .line {
+        margin: 0 90px;
+    }
+    
+    .line:before {
+        height: 60px;
+    }
+    
+    .line:after {
+        height: 60px;
+    }
+    
+    /* Bidragsektion */
+    .bidrag {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .bidrag-text {
+        font-size: 24px;
+    }
+    
+    /* Donation-knap */
+    .btn {
+        font-size: 34px;
+        padding: 10px 25px;
+    }
 }

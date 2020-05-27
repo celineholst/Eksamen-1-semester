@@ -67,46 +67,75 @@
 <!-- Indhold -->
 <main>
     <!-- Banner -->
-    <section class="banner"></section>
+    <section class="banner"></section><br>
     
-    <!-- Kontaktform -->
+    <!-- Kampagneinfo -->
     <div class="wrapper">
         <div class="kam-info">
         <h2>KAMPAGNE</h2>
-            <p class="wrap-info">Skriv din helt egen personlig hilsen til en du holder af. Vælg imellem danskerne favoritter: A - the original og C - coffee kieni, og sæt dit personlige præg på produktet. </p>
-            <span>10% af fortjenesten går til indsamlingen til Bornholms hospital.</span>
-        </div>
+            <p class="wrap-info">Skriv din helt egen personlig hilsen til en du holder af. Vælg imellem danskerne favoritter: A - the original og C - coffee kieni, og sæt dit personlige præg på produktet. </p><br>
+            <p class="procent">10% af fortjenesten går til indsamlingen til Bornholms hospital.</p>
+    </div>
         
-    <!-- Form -->
+    <!-- Bestillingsform -->
         <div class="form">
         <h3>OPLYSNINGER</h3>
-            <form>
-            <p>
-                <label>Produkt</label>
-                <input type="text" name="name">
+            <from class="form-1">
+                
+            <!-- Vælg produkt -->    
+            <p class="full">
+            <label>Produkt</label>
+            <select name="produkt">
+                <option value="vælg">Vælg produkt</option>
+                <option value="A">A - THE ORIGINAL</option>
+                <option value="C">C - COFFEE KIENI</option>
+            </select>
             </p>
-            <p>
-                <label>Størrelse</label>
-                <input type="text" name="name">
+                
+            <!-- Vælg størrelse af produkt -->    
+            <p class="full">
+            <label>Størrelse</label>
+            <select name="størrelse">
+                <option value="vælg">Vælg størrelse</option>
+                <option value="A">SMALL - 125 GRAM</option>
+                <option value="C">REGULAR - 295 GRAM</option>
+            </select>
             </p>
+                
+            <!-- Modtageren -->
             <p>
-                <label>Modtager</label>
-                <input type="text" name="name">
+            <label>Modtager</label>  
+            <input type="name" name="modtager">
             </p>
+                
+            <!-- Afsenderen -->
             <p>
-                <label>Afsender</label>
-                <input type="text" name="name">
+            <label>Afsender</label>  
+            <input type="name" name="afsender">
             </p>
-            <p>
-                <label>Skriv din hilsen her</label>
-                <textarea name="message" rows="5"></textarea>
+                
+            <!-- Besked-boks -->
+            <p class="full">
+            <label>Skriv din hilsen her</label>
+            <textarea name="hilsen" rows="5"></textarea>
             </p>
-            <p>
-                <button>LÆG I KURV</button>
+                
+            <!-- Læg i kurv-knap -->
+            <p class="full">
+            <button>LÆG I KURV</button>    
             </p>
-            </form>
+                
+            </from>
         </div>
     </div>
+    
+    <!-- Uddybende kampagne info -->
+    <section class="ud-info">
+    <h3>KORT OM KAMPAGNEN</h3>
+    <p class="ud-info-text">Vi hos Bülow givet dig muligheden for at sende en lakrids med en personlig hilsen til en du holder af - for at minde dem om at vi stå sammen hver for sig.10% af indtægten på disse lakridser, vil gå til indsamlingen til Bornholms hospital og dets personale, for at give dem et velment tak for deres hårde arbejde.<br><br>
+    Endvidere har du selv muligheden for at bidrage til indsamlingen ved at donere et selvbestemt beløb. Du kan følge indsamlingens fremgang og selv donere, ved blot at trykke på knappen nedenfor.</p><br>
+    <a href="Indsamling.html" class="btn">GÅ VIDERE TIL INDSAMLINGEN</a>
+    </section>
     
 </main>
 

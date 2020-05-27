@@ -14,6 +14,7 @@
 
 <!-- Stylesheets -->
 	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/check-out.css">
     
 </head>
 
@@ -21,8 +22,8 @@
     
 <!-- Header -->
 <header>
-    <div class="container">
-        <nav>
+    <!-- Navbar til mobil og tablet -->
+        <nav class="mobile">
         <!-- Hamburger menu -->
             <input type="checkbox" id="nav" class="hidden">
             <label for="nav" class="nav-btn">
@@ -32,22 +33,110 @@
             </label>
         <!-- Logo -->
             <div class="logo">
-                <img src="images/logo.png" alt="logo" height="35">
+                <a href="index.html"><img src="images/logo.png" alt="logo" height="35"></a>
             </div>
         <!-- Navigation links -->
             <div class="nav-wrapper">
                 <ul>
-                    <li class="menu-link"><a href="#">Hjem</a></li>
-                    <li class="menu-link"><a href="#">Shop</a></li>
-                    <li class="menu-link"><a href="#">Kampagne</a></li>
-                    <li class="menu-link"><a href="#">Donér</a></li>
+                    <li class="menu-link"><a href="index.html">Hjem</a></li>
+                    <li class="menu-link"><a href="Shop.html">Shop</a></li>
+                    <li class="menu-link"><a href="Kampagne.html">Kampagne</a></li>
+                    <li class="menu-link"><a href="Indsamling.html">Indsamling</a></li>
                 </ul>
             </div>
         </nav>
-    </div>
-</header>
     
+    <!-- Navbar til screen -->
+    <nav class="screen">
+        <!-- Logo -->
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="logo" height="35"></a>
+            </div>
+        <!-- Navigation links -->
+            <div class="nav-wrapper-1">
+                <ul>
+                    <li class="menu-link"><a href="index.html">Hjem</a></li>
+                    <li class="menu-link"><a href="Shop.html">Shop</a></li>
+                    <li class="menu-link"><a href="Kampagne.html">Kampagne</a></li>
+                    <li class="menu-link"><a href="Indsamling.html">Indsamling</a></li>
+                </ul>
+            </div>
+        </nav>
+</header>
+
+<!-- Indhold -->
 <main>
+    <!-- Banner -->
+    <section class="banner"></section>
+    
+    <!-- Introduktion -->
+    <div class="wrapper">
+    <section class="intro">
+    <h2>Af hjertet tak</h2>
+    <p class="tak">Tak for opbakningen til vores indsamling. Din donation vil glæde at over 600 ansatte på Bornholms hospital med lidt sødt og et velment tak for deres indsats.</p>
+    </section>
+    
+    <!-- Checkout form -->
+    <div class="check-wrap">
+        <div class="check-container">
+            <h3>DONATION INFOMATION</h3>
+            
+            <!-- Form -->
+            <div class="input-form">
+                <!-- Beløb -->
+                <div class="section-1">
+                <div class="items">
+                    <label class="label">Beløb</label>
+                    <input type="text" class="input" placeholder="DDK">
+                </div>
+                </div>
+                
+                <!-- Kortholder -->
+                <div class="section-2">
+                <div class="items">
+                    <label class="label">Kortholders navn</label>
+                    <input type="text" class="input" placeholder="Kortholders navn">
+                </div>
+                    
+                <!-- Kortnummer -->
+                <div class="section-3">
+                <div class="items">
+                    <label class="label">Kortnummer</label>
+                    <input type="text" class="input" placeholder="Kortnummer">
+                </div>
+                </div>
+                
+                <!-- Udløbsdato -->
+                <div class="section-4">
+                <div class="items">
+                    <label class="label">Udløbsdato</label>
+                    <input type="text" class="input" placeholder="MM / YY">
+                </div>
+                    
+                <!-- CVC -->
+                <div class="items">
+                    <div class="cvc">
+                    <label class="label">CVC</label>
+                    <!-- Infoikon -->
+                    <div class="tooltip">?
+                        <div class="cvc-img">
+                        <img src="images/cvc.png" alt="cvc">
+                        </div>
+                    </div>
+                    </div>
+                    <input type="text" class="input" placeholder="CVC">
+                </div>
+                </div> 
+                </div>
+            </div>
+            
+            <!-- Knap -->
+            <div class="btn">DONÈR</div>
+        </div>
+    </div>
+        
+        
+    </div>
 </main>
 
 <!-- Footer -->

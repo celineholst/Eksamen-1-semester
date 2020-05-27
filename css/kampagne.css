@@ -7,8 +7,6 @@
 body {
     width: 100%;
     height: 110vh;
-    display: flex;
-    flex-direction: column;
 }
 
 /* Fonts */
@@ -27,11 +25,6 @@ body {
 
 /* Banner */
 .banner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    /* Billede */
     background-image: url(../images/banner.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -39,4 +32,264 @@ body {
     width: 375px;
     height: 200px;
     margin-top: 30px;
+}
+
+/* Bestillingsform */
+.wrapper {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 0 20px;
+    box-shadow: 0 0 10px #e3e3e3;
+}
+
+.wrapper > * {
+    padding: 1em;
+}
+
+.kam-info {
+    background: var(--beige);
+    padding: 15px 20px;
+}
+
+/* Kampagneinfo text */
+h2 {
+    font-family: var(--headline);
+    font-size: 22px;
+}
+
+.wrap-info {
+    font-family: var(--main-text);
+    font-size: 13px;
+}
+
+.procent {
+    font-family: var(--main-text);
+    font-size: 12px;
+    font-style: italic;
+}
+
+h2, .wrap-info, .procent {
+    text-align: center;
+    line-height: 1.4;
+}
+
+h3 {
+    font-family: var(--headline);
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Form styles */
+.form {
+    background: var(--white);
+}
+
+.form .form-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.form .form-1 label {
+    display: block;
+    font-family: var(--main-text);
+    font-size: 14px;
+}
+
+.form .form-1 p {
+    margin: 0;
+}
+
+.form .form-1 .full {
+    grid-column: 1 / 3;
+}
+
+.form .form-1 button, .form .form-1 input, .form .form-1 textarea, .form .form-1 select {
+    width: 100%;
+    padding: 1em;
+    border: 1px solid #e3e1da;
+}
+
+.form .form-1 button {
+    background: var(--brown);
+    border: 0;
+    font-family: var(--headline);
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--white);
+    padding: 8px;
+}
+
+.form .form-1 button:hover, .form .form-1 button:focus {
+    background: var(--beige);
+    color: #000;
+    outline: 0;
+}
+
+/* Uddybende kampagne info */
+.ud-info {
+    padding: 20px 30px;
+    text-align: center;
+}
+
+h3 {
+    font-size: var(--headline);
+    color: var(--brown);
+    font-size: 22px;
+    padding: 10px;
+}
+
+.ud-info-text {
+    font-family: var(--main-text);
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+/* Indsamlingsknap */
+.ud-info .btn {
+    background: var(--brown);
+    border: 0;
+    font-family: var(--headline);
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--white);
+    padding: 10px;
+    text-decoration: none;
+}
+
+.ud-info .btn:hover {
+    background: var(--beige);
+    color: #000;
+    outline: 0;
+}
+
+/* @media-rules tablet */
+@media only screen and (min-width:768px) {
+    /* Banner */
+    .banner {
+        width: 768px;
+        height: 350px;
+    }
+    
+    /* Bestillingsform */
+    .kam-info {
+        padding: 15px 35px;
+    }
+    
+    /* Kampagneinfo text */ 
+    h2 {
+        font-size: 30px;
+    }
+
+    .wrap-info {
+        font-size: 16px;
+    }
+
+    .procent {
+        font-size: 16px;
+    }
+    
+    h3 {
+        font-size: 26px;
+    }
+    
+    /* Form styles */
+    .form {
+        padding: 20px 40px
+    }
+    
+    .form .form-1 label {
+        font-size: 18px;
+    }
+    
+    .form .form-1 button {
+        font-size: 24px;
+    }
+    
+    /* Uddybende kampagne info */
+    .ud-info {
+        padding: 20px 50px;
+    }
+    
+    h3 {
+        font-size: 28px;
+    }
+
+    .ud-info-text {
+        font-size: 16px;
+    }
+    
+    /* Indsamlingsknap */
+    .ud-info .btn {
+        font-size: 20px;
+    }
+}
+
+/* @media-rules laptop */
+@media only screen and (min-width:950px) {
+    /* Banner */
+    .banner {
+        width: 1280px;
+        height: 500px;
+    }
+    
+    /* Kampagneinfo text */
+    h2 {
+        font-size: 44px;
+    }
+
+    .wrap-info {
+        font-size: 24px;
+    }
+
+    .procent {
+        font-size: 24px;
+    }
+    
+    h3 {
+        font-size: 38px;
+    }
+    
+    /* Form styles */
+    .form .form-1 label {
+        font-size: 26px;
+    }
+    
+    .form .form-1 button {
+        font-size: 30px;
+        padding: 12px;
+    }
+    
+    /* Bestillingsform */ 
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        margin-left: 50px;
+        margin-top: 20px;
+    }
+    
+    .wrapper > * {
+        padding: 2em;
+    }
+    
+    /* Uddybende kampagne info */
+    .ud-info {
+        padding: 30px 80px;
+    }
+    
+    h3 {
+        font-size: 40px;
+    }
+
+    .ud-info-text {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    /* Indsamlingsknap */
+    .ud-info .btn {
+        font-size: 30px;
+        padding: 14px;
+    }
 }
