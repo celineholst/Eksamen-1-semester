@@ -36,8 +36,8 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    width: 375px;
-    height: 200px;
+    width: 100%;
+    height: 20%;
 }
 
 /* Hero Image text */
@@ -64,6 +64,12 @@ body {
     font-weight: 600;
     color: #000;
     text-decoration: none;
+}
+
+.btn:hover {
+    background: var(--beige);
+    color: #000;
+    outline: 0;
 }
 
 /* Beskrivelse af kampagnen */
@@ -132,6 +138,7 @@ h4 {
     animation-name: slide;
     animation-duration: 10s;
     animation-iteration-count: infinite;
+    margin-bottom: 80px;
 }
 
 /* Animationer */
@@ -154,8 +161,7 @@ h4 {
 @media only screen and (min-width:768px) {
     /* Hero Image */
     .hero {
-        width: 768px;
-        height: 350px;
+        height: 28%;
     }
     
     /* Hero text */
@@ -204,6 +210,10 @@ h4 {
         width: 768px; 
     }
     
+    .auto-slider_content {
+        margin-bottom: 230px;
+    }
+    
     /* Animationer */
     @keyframes slide {
     25% {
@@ -222,12 +232,6 @@ h4 {
 
 /* @media-rules laptop */
 @media only screen and (min-width:950px) {
-    /* Hero Image */
-    .hero {
-        width: 1280px;
-        height: 500px;
-    }
-    
     /* Hero text */
     .hero h2 {
         font-size: 55px;
@@ -271,6 +275,10 @@ h4 {
         width: 1280px; 
     }
     
+    .auto-slider_content {
+        margin-bottom: 260px;
+    }
+    
     /* Animationer */
     @keyframes slide {
     25% {
@@ -281,6 +289,77 @@ h4 {
     }
     75% {
         transform: translateX(-1290px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+    
+/* @media-rules large desktops */ 
+@media only screen and (min-width:1900px) {
+    /* Hero Image */
+    .hero {
+        height: 36%;
+    }
+    
+    /* Hero text */
+    .hero h2 {
+        font-size: 80px;
+    }
+    
+    /* Button */
+    .hero .btn {
+        width: 330px;
+        font-size: 45px;
+        padding: 0.5em;
+    }
+    
+    /* Beskrivelse af kampagnen */
+    .about {
+        padding: 0 190px;
+    }
+    
+    .about h3 {
+        font-size: 65px;
+    }
+    
+    .about p {
+        font-size: 32px;
+    }
+    
+    .signature {
+        width: 350px;
+        margin-top: -100px;
+    }
+    
+    /* Blogopslag */
+    h3 {
+        font-size: 65px;
+    }
+    
+    h4 {
+        font-size: 50px;
+    }
+    
+    /* Image slider */
+    .auto-slider_content {
+        margin-bottom: 450px;
+    }
+    
+    .auto-slider li img {
+        width: 960px; 
+    }
+    
+    /* Animationer */
+    @keyframes slide {
+    25% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    75% {
+        transform: translateX(0);
     }
     100% {
         transform: translateX(0);

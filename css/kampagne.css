@@ -29,17 +29,17 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    width: 375px;
-    height: 200px;
+    width: 100%;
+    height: 20%;
     margin-top: 30px;
 }
 
 /* Bestillingsform */
 .wrapper {
-    max-width: 1170px;
+    max-width: 1900px;
     margin-left: auto;
     margin-right: auto;
-    margin: 0 20px;
+    margin: 0 35px;
     box-shadow: 0 0 10px #e3e3e3;
 }
 
@@ -131,6 +131,7 @@ h3 {
 .ud-info {
     padding: 20px 30px;
     text-align: center;
+    margin-bottom: 300px;
 }
 
 h3 {
@@ -166,12 +167,6 @@ h3 {
 
 /* @media-rules tablet */
 @media only screen and (min-width:768px) {
-    /* Banner */
-    .banner {
-        width: 768px;
-        height: 350px;
-    }
-    
     /* Bestillingsform */
     .kam-info {
         padding: 15px 35px;
@@ -228,12 +223,6 @@ h3 {
 
 /* @media-rules laptop */
 @media only screen and (min-width:950px) {
-    /* Banner */
-    .banner {
-        width: 1280px;
-        height: 500px;
-    }
-    
     /* Kampagneinfo text */
     h2 {
         font-size: 44px;
@@ -265,7 +254,7 @@ h3 {
     .wrapper {
         display: grid;
         grid-template-columns: 1fr 2fr;
-        margin-left: 50px;
+        margin-left: 40px;
         margin-top: 20px;
     }
     
@@ -292,4 +281,60 @@ h3 {
         font-size: 30px;
         padding: 14px;
     }
+}
+
+/* @media-rules large desktops */ 
+@media only screen and (min-width:1900px) {
+    /* Kampagneinfo text */
+    h2 {
+        font-size: 50px;
+    }
+
+    .wrap-info {
+        font-size: 32px;
+    }
+
+    .procent {
+        font-size: 32px;
+    }
+    
+    /* Form styles */
+    .form .form-1 label {
+        font-size: 30px;
+    }
+    
+    .form .form-1 button {
+        font-size: 36px;
+    }
+    
+    /* Bestillingsform */ 
+    .wrapper {
+        margin: 30px 100px;
+    }
+    
+    .wrapper > * {
+        padding: 3em;
+    }
+    
+    /* Uddybende kampagne info */
+    .ud-info {
+        padding: 30px 150px;
+        margin-bottom: 380px;
+    }
+    
+    h3 {
+        font-size: 48px;
+    }
+
+    .ud-info-text {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+    
+    /* Indsamlingsknap */
+    .ud-info .btn {
+        font-size: 36px;
+        padding: 18px;
+    }
+    
 }

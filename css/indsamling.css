@@ -272,3 +272,67 @@ h4 {
         padding: 10px 25px;
     }
 }
+
+/* @media-rules large desktops */ 
+@media only screen and (min-width:1900px) {
+    /* Indledning til indsamling */ 
+    .indledning {
+        padding: 15px 180px;
+        margin-top: 100px;
+    }
+    
+    h2 {
+        font-size: 65px;
+    }
+    
+    h3 {
+        font-size: 50px;
+    }
+    
+    .indledning-text {
+        font-size: 32px;
+    }
+    
+    /* Animeret linje-graf */ 
+    h4 {
+        font-size: 50px;
+    }
+    
+    .goal {
+        font-size: 32px;
+    }
+    
+    .goal-2 {
+        font-size: 28px;
+        margin-top: 80px;
+    }
+    
+    /* Styling af linje */
+    .line {
+        margin: 0 150px;
+    }
+    
+    .line:before {
+        height: 80px;
+    }
+    
+    .line:after {
+        height: 80px;
+    }
+    
+    /* Bidragsektion */
+    .bidrag {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    
+    .bidrag-text {
+        font-size: 32px;
+    }
+    
+    /* Donation-knap */
+    .btn {
+        font-size: 42px;
+        padding: 10px 35px;
+    }
+}

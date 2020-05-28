@@ -184,19 +184,67 @@ article:nth-child(4) {
     
     /* Produktkort */
     .card {
-        width: 220px;
-        height: 380px;
-        margin-left: 100px;
-        margin-top: 40px;
-        margin-bottom: 40px;
+        width: 250px;
+        height: 70%;
+        margin-left: 30px;
     }
     
     .card-small {
-        width: 220px;
-        height: 380px;
-        margin-left: 100px;
-        margin-top: 40px;
-         margin-bottom: 40px;
+        width: 250px;
+        height: 70%;
+        margin-left: 30px;
     }
+    
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        max-width: 1280px;
+    }
+}
 
+/* @media-rules large desktops */ 
+@media only screen and (min-width:1900px) {
+    /* Indledning */
+    h2 {
+        font-size: 65px;
+        margin-top: 40px;
+    }
+    
+    .indledning {
+        font-size: 32px;
+        padding: 0 190px;
+    }
+    
+    /* Produktkort */
+    .card {
+        width: 320px;
+        height: 390px;
+        margin-left: 170px;
+    }
+    
+    .card-small {
+        width: 320px;
+        height: 390px;
+        margin-left: 170px;
+    }
+    
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        max-width: 1900px;
+    }
+    
+    /* Ikoner */
+    .icon {
+        width: 35px;
+    }
+    
+    /* Text styles */
+    .card_name p {
+        font-size: 23px;
+    }
+    
+    .info {
+        font-size: 16px;
+    }
 }
