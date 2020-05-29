@@ -55,7 +55,7 @@ h2 {
     outline: none;
     width: 100%;
     padding: 0 25px;
-    margin-bottom: 20px;
+    margin-bottom: 260px;
 }
 
 h3 {
@@ -214,7 +214,7 @@ h3 {
     .check-container {
         padding: 15px 50px;
         font-size: 22px;
-        margin-bottom: 400px;
+        margin-bottom: 150px;
     }
     
     .input-form .section-4 {
@@ -261,7 +261,7 @@ h3 {
     .check-container {
         padding: 15px 70px;
         font-size: 28px;
-        margin-bottom: 550px;
+        margin-bottom: 300px;
     }
 
     .input-form .section-4 .items {

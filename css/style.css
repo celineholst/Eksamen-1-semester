@@ -25,7 +25,8 @@ body {
     --beige: #e3e1da;
 }
 
-/* Styling af header start */
+/* Styling af mobile header */
+@media only screen and (max-width:600px) {
 .mobile {
     position: fixed;
     padding: 8px;
@@ -56,7 +57,7 @@ body {
     height: 100%;
     z-index: -1;
     background: var(--header-footer);
-    opacity: 0;
+    display: none;
     transition: all 0.2s ease;
 }
 
@@ -72,7 +73,6 @@ body {
     float: none;
     width: 100%;
     text-align: right;
-    margin-bottom: 10px;
 }
 
 /* Effekt på menulinks */
@@ -95,7 +95,7 @@ body {
 /* Styling af menutext */
 .nav-wrapper ul li a {
     padding: 10px 24px;
-    opacity: 0;
+    display: none;
     outline: none;
     color: var(--white);
     font-family: var(--headline);
@@ -167,41 +167,171 @@ body {
 
 #nav:checked ~ .nav-wrapper {
     z-index: 9990;
-    opacity: 1;
+    display: block;
 }
 
 #nav:checked ~ .nav-wrapper ul li a {
-    opacity: 1;
+    display: block;
     transform: translateX(0);
 }
 
 .hidden {
     display: none;
 }
+}
 
 /* @media-rules tablet */
-@media only screen and (min-width:768px) {
-    /* Styling af menutext */
-    .nav-wrapper ul li a {
-        font-size: 24px;
-    }
-    
-    /* Hamburger menu */
-    .nav-btn i {
-        width: 35px;
-    }
-    
-    .nav-btn i:nth-child(1) {
-        margin-top: 16px;
-    }
+@media only screen and (min-width:601px) {
+    .mobile {
+    position: fixed;
+    padding: 8px;
+    background-color: var(--header-footer);
+    width: 100%;
+    height: 75px;
+    z-index: 999;
+}
 
-    .nav-btn i:nth-child(2) {
-        margin-top: 5px;
-    }
+.screen {
+    display: none;
+}
 
-    .nav-btn i:nth-child(3) {
-        margin-top: 5px;
-    }
+/* Logo */
+.logo {
+    float: left;
+    padding: 8px;
+    margin-left: 16px;
+    margin-top: 4px;
+}
+
+/* Basic nav syles */
+.nav-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: var(--header-footer);
+    display: none;
+    transition: all 0.2s ease;
+}
+
+.nav-wrapper ul {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+.nav-wrapper ul li {
+    display: block;
+    float: none;
+    width: 100%;
+    text-align: right;
+}
+
+/* Effekt på menulinks */
+.nav-wrapper ul li:nth-child(1) a {
+    transition-delay: 0.2s;
+}
+
+.nav-wrapper ul li:nth-child(2) a {
+    transition-delay: 0.3s;
+}
+
+.nav-wrapper ul li:nth-child(3) a {
+    transition-delay: 0.4s;
+}
+
+.nav-wrapper ul li:nth-child(4) a {
+    transition-delay: 0.5s;
+}
+
+/* Styling af menutext */
+.nav-wrapper ul li a {
+    padding: 10px 24px;
+    display: none;
+    outline: none;
+    color: var(--white);
+    font-family: var(--headline);
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transform: translateX(-20px);
+    transition: all 0.2s ease;
+}
+
+/* Hamburger menu */
+.nav-btn {
+    position: fixed;
+    right: 25px;
+    top: 10px;
+    display: block;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    z-index: 9999;
+    border-radius: 50%;
+}
+
+.nav-btn i {
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--white);
+    border-radius: 2px;
+}
+
+.nav-btn i:nth-child(1) {
+    margin-top: 18px;
+}
+
+.nav-btn i:nth-child(2) {
+    margin-top: 6px;
+    opacity: 1;
+}
+
+.nav-btn i:nth-child(3) {
+    margin-top: 6px;
+}
+
+/* Animation af hamburger menu */
+#nav:checked + .nav-btn {
+    transform: rotate(45deg);
+}
+
+#nav:checked + .nav-btn i:nth-child(1) {
+    transform: translateY(9px) rotate(180deg);
+}
+
+#nav:checked + .nav-btn i:nth-child(2) {
+    opacity: 0;
+}
+
+#nav:checked + .nav-btn i:nth-child(3) {
+    transform: translateY(-6px) rotate(90deg);
+}
+
+#nav:checked + .nav-btn i {
+    background: var(--white);
+    transition: transform 0.2s ease;
+}
+
+#nav:checked ~ .nav-wrapper {
+    z-index: 9990;
+    display: block;
+}
+
+#nav:checked ~ .nav-wrapper ul li a {
+    display: block;
+    transform: translateX(0);
+}
+
+.hidden {
+    display: none;
+}
 }
 
 /* @media-rules laptop */
@@ -277,7 +407,8 @@ main {
     flex: 1 0 auto;
 }
 
-/* Styling af footer start */
+/* Styling af mobil footer start */
+@media only screen and (max-width:600px) {
 footer {
     background: var(--header-footer);
     color: var(--white);
@@ -295,7 +426,7 @@ footer a {
     text-decoration: none;
     color: var(--white);
     font-family: var(--main-text);
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.5;
 }
 
@@ -377,63 +508,120 @@ input[type="submit"] {
 .terms-list {
     width: 100%;
 }
+}
 
 /* @media-rules tablet */
-@media only screen and (min-width:768px) {
-    /* Opdele footer i kolonner */
-    .main {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        flex-flow: wrap;
-    }
-    
-    .main-item {
-        width: 50%;
-    }
-    
-    /* Styling af footer text */ 
-    .title {
-        font-size: 24px;
-    }
-    
-    footer a {
-        font-size: 18px;
-    }
-    
-    p {
-        font-size: 18px;
-    }
-    
-    .main-item {
+@media only screen and (min-width:601px) {
+    footer {
+    background: var(--header-footer);
+    color: var(--white);
+    width: 100%;
+    flex-shrink: 0;
+}
+
+/* Styling af footer text */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--white);
+    font-family: var(--main-text);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+   font-family: var(--main-text);
+    font-size: 18px;
+    line-height: 1.5; 
+}
+
+.title {
+    font-family: var(--headline);
+    font-family: 24px;
+    padding-bottom: 4px;
+    padding-top: 8px;
+}
+
+.main-item {
     padding: 0 2.2rem;
     margin-top: 20px;
-    }
-    
-    /* Nyhedsbrev */
-    input[type="email"] {
-       padding: 1rem;
-        font-size: 16px;
-    }
-    
-    input[type="submit"] {
-        font-size: 18px;
-    }
-    
-    /* SoMe ikoner */
-    .social-list img {
+    width: 50%;
+}
+
+/* SoMe ikoner */
+.social {
+    padding: 0 1.8rem 1.25rem;
+}
+
+.social-list {
+    display: flex;
+    justify-content: center;
+    padding-top: 1.25rem;
+}
+
+.social-list img {
     width: 55px;
-    }
-    
-    .social-list li {
+}
+
+.social-list li {
     margin: 0.9rem;
-    }
+}
+
+/* Nyhedsbrev */
+form {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+input[type="email"] {
+    font-family: var(--main-text);
+    padding: 1rem;
+    font-size: 16px;
+    border: 0;
+    margin-top: 0.3rem;
+}
+
+input[type="submit"] {
+    background-color: var(--brown);
+    color: var(--white);
+    font-family: var(--headline);
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 0;
+    padding: 0.6rem 0.9rem;
+    margin-top: 0.3rem;
+}
+
+/* Terms, Copyright */
+.terms {
+    font-family: var(--main-text);
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.terms-list {
+    width: 100%;
+}
     
-    /* Terms, Copyright */
-    .terms {
-        font-size: 18px;
-    }
+/* Opdele footer i kolonner */
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
 }
 
 /* @media-rules laptop */

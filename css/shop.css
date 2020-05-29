@@ -53,7 +53,7 @@ h2 {
     letter-spacing: 0.5px;
 }
 
-.card_name p {
+.card_name h3 {
     font-size: 16px;
     font-family: var(--headline);
     font-weight: 600;

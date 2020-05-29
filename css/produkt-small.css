@@ -183,7 +183,7 @@ h5 {
     width: 100%;
 }
 
-#bæredygtig {
+#baeredygtig {
     color: black;
     margin-top: 20px;
 }
@@ -212,7 +212,7 @@ h6 {
     text-align: center;
 }
 
-.næring {
+.naering {
     font-family: var(--main-text);
     font-size: 14px;
     text-align: center;
@@ -329,7 +329,7 @@ h6 {
         margin-top: 15px;
     }
     
-    .næring {
+    .naering {
         font-size: 18px;
     }
 }
@@ -434,7 +434,7 @@ h6 {
     }
     
     /* Bæredygtighed / infographic */
-    #bæredygtig {
+    #baeredygtig {
         margin-left: 440px;
     }
     
@@ -455,7 +455,7 @@ h6 {
         font-size: 24px;
     }
     
-    .næring {
+    .naering {
         font-size: 24px;
     }
     
@@ -511,7 +511,7 @@ h6 {
         left: -200px;
     }
     
-    #råvarer {
+    #raavarer {
         position: relative;
         left: -450px;
     }
@@ -550,7 +550,7 @@ h6 {
         font-size: 30px;
     }
     
-    .næring {
+    .naering {
         font-size: 30px;
     }
 }

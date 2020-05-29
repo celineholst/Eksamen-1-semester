@@ -109,7 +109,7 @@ h4 {
     width: 0%;
     height: 25px;
     background-color: var(--brown);
-    animation-duration: .7s;
+    animation-duration: .6s;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
     animation-name: goal;
